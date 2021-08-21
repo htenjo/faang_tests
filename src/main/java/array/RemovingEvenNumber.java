@@ -6,7 +6,10 @@ import java.util.List;
 import static java.util.Arrays.compare;
 
 public class RemovingEvenNumber {
-    public static int[] removeEven(int[] arr) {
+    /**
+     * As we need to check all elements, complexity is O(n)
+     */
+    private static int[] removeEven(int[] arr) {
         List<Integer> oddNumbers = new ArrayList<>();
 
         for (int i : arr) {
