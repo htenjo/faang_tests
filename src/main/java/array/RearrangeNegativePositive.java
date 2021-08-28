@@ -32,7 +32,23 @@ public class RearrangeNegativePositive {
      * Space Complexity = O(1)
      */
     private static void reArrangeInPlace(int[] arr) {
+        int[] aux = new int[arr.length];
+        int current=0;
 
+        for (int elem : arr) {
+            if (elem < 0) {
+                aux[current++] = elem;
+            }
+        }
+        for (int elem : arr) {
+            if (elem >= 0) {
+                aux[current++] = elem;
+            }
+        }
+
+        for(int i = 0; i < aux.length; i++) {
+            arr[i] = aux[i];
+        }
     }
 
     public static void main(String[] args) {
